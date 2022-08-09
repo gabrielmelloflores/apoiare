@@ -41,7 +41,7 @@ class AdminPostController extends Controller
     {
 
         $attributes = $this->validatePost($post);
-
+        dd($attributes);
 
         if ($attributes['thumbnail'] ?? false) {
             $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
