@@ -20,26 +20,21 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-family: Open Sans, sans-serif">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+        <section class="px-6 py-8">
+        @if (isset($header))
+            {{ $header }}
+        @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="max-w-6xl mx-auto mt-6 lg:mt-20 space-y-6">
                 {{ $slot }}
             </main>
-        </div>
 
         @stack('modals')
 

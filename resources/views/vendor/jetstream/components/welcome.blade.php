@@ -19,7 +19,7 @@
 <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('imagens/coracaoGravida3.png'); height: 60vh; max-height:460px;">
     <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
         <!--Title-->
-        <p class="text-black font-extrabold text-3xl md:text-5xl">
+        <p class="text-white font-extrabold text-3xl md:text-5xl">
             Apoiare
         </p>
         <p class="text-xl md:text-2xl text-gray-500">Bem-vindo</p>

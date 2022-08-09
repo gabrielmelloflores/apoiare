@@ -39,12 +39,11 @@ class AdminPostController extends Controller
 
     public function update(Post $post)
     {
-
         $attributes = $this->validatePost($post);
-        dd($attributes);
 
         if ($attributes['thumbnail'] ?? false) {
             $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
+//            $attributes['thumbnail']->store('public/thumbnails');
         }
 
         $post->update($attributes);
@@ -61,15 +60,13 @@ class AdminPostController extends Controller
     protected function validatePost(?Post $post = null): array
     {
         $post ??= new Post();
-
         return request()->validate([
             'title' => 'required',
             'thumbnail' => $post->exists ? ['image'] : ['required', 'image'],
             'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post)],
             'excerpt' => 'required',
             'body' => 'required',
-            'category_id' => ['required', Rule::exists('categories', 'id')],
-            'published_at' => 'required'
+            'category_id' => ['required', Rule::exists('categories', 'id')]
         ]);
     }
 //    public function store(Post $post)
