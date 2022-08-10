@@ -131,6 +131,10 @@
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
 
+                <x-jet-responsive-nav-link  href="admin/posts">
+                    {{ __('Admin') }}
+                </x-jet-responsive-nav-link >
+
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                     <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
                         {{ __('API Tokens') }}

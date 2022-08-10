@@ -22,10 +22,15 @@ use App\Services\Newsletter;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//
+//Route::get('/', function () {
+//    $posts = ['posts' => Post::latest()->filter(
+//        request(['search', 'category', 'author'])
+//    )->paginate(6)->withQueryString()];
+//    return view('vendor.jetstream.components.welcome', compact('posts'));
+//})->name('/');
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('/');
+Route::get('/', [PostController::class, 'welcome'])->name('/');
 
 Route::middleware([
     'auth:sanctum',

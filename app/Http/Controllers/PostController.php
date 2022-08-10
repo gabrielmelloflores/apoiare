@@ -22,6 +22,18 @@ class PostController extends Controller
         ]);
     }
 
+    public function welcome()
+    {
+        return view('welcome',[
+            'posts' => Post::latest()->filter(
+                request(['search', 'category', 'author'])
+            )->paginate(3)->withQueryString()
+//            'posts' => Post::all(),
+//            'categories' => Category::all(),
+//            'currentCategory' => Category::firstWhere('slug', request('category'))
+        ]);
+    }
+
     public function show(Post $post)
     {
         return view('posts.show', [

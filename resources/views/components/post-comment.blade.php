@@ -3,7 +3,11 @@
 <x-panel class="bg-gray-50">
     <article class="flex space-x-4">
         <div class="flex-shrink-0">
-            <img src="https://i.pravatar.cc/60?u={{ $comment->user_id }}" alt="" width="60" height="60" class="rounded-xl">
+            @if(Auth::user())
+                <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" width="60" height="60" class="rounded-xl">
+            @else
+                <img src="{{ $comment->author->profile_photo_url }}" alt="" width="60" height="60" class="rounded-xl">
+            @endif
         </div>
 
         <div>

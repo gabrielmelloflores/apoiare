@@ -28,7 +28,9 @@
         @else
             <p class="text-center" >No post yet. Please check back later.</p>
         @endif
-
+    <x-slot name="footer">
+        @include ('layouts.footer')
+    </x-slot>
 {{--        <div class="lg:grid lg:grid-cols-3">--}}
 
 {{--            <x-post-card/>--}}
