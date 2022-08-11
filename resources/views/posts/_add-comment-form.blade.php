@@ -1,4 +1,3 @@
-{{--@auth--}}
     <x-panel>
         <form method="POST" action="/posts/{{ $post->slug }}/comments">
             @csrf
@@ -13,26 +12,27 @@
             </header>
 
             <div class="mt-6">
+
+                <input class="border w-full focus:outline-none focus:ring mb-4 rounded"
+                       name="name"
+                       id="name"
+                       placeholder="Nos fale seu nome!"
+                >
+                @error('name')
+                <span class="text-xs text-red-500">{{ $message }}</span>
+                @enderror
             <textarea
                 name="body"
-                class="border w-full text-sm focus:outline-none focus:ring"
+                class="border w-full text-sm focus:outline-none focus:ring rounded"
                 rows="5"
-                placeholder="Quick, think of something to say!"
+                placeholder="Rápido, pense em algo para dizer!"
                 required></textarea>
 
                 @error('body')
-                <span class="text-xs text-red-500">{{ $message }}</span>
+                    <span class="text-xs text-red-500">{{ $message }}</span>
                 @enderror
             </div>
 
             <x-form.button>Submit</x-form.button>
         </form>
     </x-panel>
-{{--@else--}}
-{{--    <p class="font-semibold">--}}
-{{--        <a href="/register" class="hover:underline">Register</a>--}}
-{{--        or--}}
-{{--        <a href="/login" class="hover:underline">Log in</a>--}}
-{{--        to leave a comment--}}
-{{--    </p>--}}
-{{--@endauth--}}

@@ -4,15 +4,15 @@
         {{ $heading }}
     </h1>
 <!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="bg-blue-300">
+<nav class="bg-pink-300">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">All Posts</a>
-                        <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-blue-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">New Post</a>
+                        <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'bg-pink-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">All Posts</a>
+                        <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'bg-pink-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">New Post</a>
 
 {{--                        <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>--}}
 

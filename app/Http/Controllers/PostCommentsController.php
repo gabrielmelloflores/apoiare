@@ -15,10 +15,17 @@ class PostCommentsController extends Controller
             'body' => 'required'
         ]);
 
-        $post->comments()->create([
-            'user_id' => request()->user()->id ?? '',
+        $create = [
             'body' => request('body')
-        ]);
+        ];
+
+        if(request()->user()) {
+            $create['user_id'] = request()->user()->id;
+        }else{
+            $create['name'] = request('name') ?? 'Anônimo';
+        }
+
+        $post->comments()->create($create);
 
         return back();
     }
