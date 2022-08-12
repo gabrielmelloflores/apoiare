@@ -9,6 +9,27 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
+            @auth
+                <div class="flex justify-center">
+                    <x-jet-label for="admin">
+                        <div class="flex items-center">
+                            <x-jet-checkbox name="admin" id="admin"/>
+                            <div class="ml-2 mr-2 font-semibold text-lg">
+                                Admin
+                            </div>
+                        </div>
+                    </x-jet-label>
+                    <x-jet-label for="author">
+                        <div class="flex ml-12 items-center font-semibold text-lg">
+                            <x-jet-checkbox name="author" id="author"/>
+                            <div class="ml-2 mr-2">
+                                Autor
+                            </div>
+                        </div>
+                    </x-jet-label>
+                </div>
+            @endauth
+
             <div>
                 <x-jet-label for="name" value="{{ __('Name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />

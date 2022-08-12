@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
         Model::unguard();
 
         Gate::define('admin', function (User $user) {
-            return $user->email == 'admin@admin.com';
+            return $user->role == 1;
 //            return $user->role == '1'; //Admin
         });
 

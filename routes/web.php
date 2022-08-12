@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\NewsletterController;
@@ -11,6 +12,7 @@ use App\Models\Post;
 use App\Models\User;
 use App\Http\Controllers\SessionController;
 use App\Services\Newsletter;
+use Laravel\Fortify\Http\Controllers\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +39,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
 });
 
 // Route::get('/dashboard', function () {
@@ -50,6 +53,7 @@ Route::get('posts/{post:slug}', [PostController::class, 'show']);
 Route::post('posts/{post:slug}/comments', [PostCommentsController::class, 'store']);
 
 Route::post('newsletter', NewsletterController::class);
+//dd(Auth::check());
 
 // Admin
 //index, show, create, store, edit, update, destroy
@@ -61,3 +65,10 @@ Route::middleware('can:admin')->group(function(){
     Route::patch('admin/posts/{post}', [AdminPostController::class, 'update']);
     Route::delete('admin/posts/{post}', [AdminPostController::class, 'destroy']);
 });
+
+Route::get('/register', [RegisteredUserController::class, 'create'])
+//    ->middleware(['guest:'.config('fortify.guard')])
+    ->name('register');
+
+Route::post('/register', [RegisteredUserController::class, 'store']);
+//->middleware(['guest:'.config('fortify.guard')]);
