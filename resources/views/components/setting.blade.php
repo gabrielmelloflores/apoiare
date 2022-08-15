@@ -11,8 +11,9 @@
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'bg-pink-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">All Posts</a>
-                        <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'bg-pink-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">New Post</a>
+                        <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'bg-pink-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">Todas publicações</a>
+                        <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'bg-pink-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">Nova publicação</a>
+                        <a href="/admin/category" class="{{ request()->is('admin/category') ? 'bg-pink-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-pink-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium' }}">Categorias</a>
 
 {{--                        <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>--}}
 

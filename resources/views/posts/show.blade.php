@@ -8,7 +8,7 @@
                 </p>
 
                 <div class="flex items-center lg:justify-center text-sm mt-4">
-                    <img src="/images/lary-avatar.svg" alt="Lary avatar">
+                    <img src="{{ $post->author->profile_photo_url }}" alt="Lary avatar" width="100" height="100" class="rounded-xl">
                     <div class="ml-3 text-left">
                         <h5 class="font-bold">
                             <a href="/?author={{ $post->author->username }}">{{ $post->author->name }}</a>

@@ -29,12 +29,19 @@ class AppServiceProvider extends ServiceProvider
         Model::unguard();
 
         Gate::define('admin', function (User $user) {
-            return $user->role == 1;
-//            return $user->role == '1'; //Admin
+            return $user->role == 1; //Admin
         });
 
-//        Gate::define('author', function (User $user) {
-//            return $user->role == '2'; //Author
-//        });
+        Gate::define('author', function (User $user) {
+            return $user->role == 2; //Author
+        });
+
+        Gate::define('adminOrAuthor', function (User $user) {
+            if($user->role == 1) {
+                return $user->role == 1;
+            }else if($user->role == 2){
+                return $user->role == 2;
+            }
+        });
     }
 }

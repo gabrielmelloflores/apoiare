@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PostCommentsController;
 use App\Http\Controllers\PostController;
@@ -57,13 +58,16 @@ Route::post('newsletter', NewsletterController::class);
 
 // Admin
 //index, show, create, store, edit, update, destroy
-Route::middleware('can:admin')->group(function(){
+Route::middleware('can:adminOrAuthor')->group(function(){
     Route::post('admin/posts', [AdminPostController::class, 'store']);
     Route::get('admin/posts/create', [AdminPostController::class, 'create']);
     Route::get('admin/posts', [AdminPostController::class, 'index']);
     Route::get('admin/posts/{post}/edit', [AdminPostController::class, 'edit']);
     Route::patch('admin/posts/{post}', [AdminPostController::class, 'update']);
     Route::delete('admin/posts/{post}', [AdminPostController::class, 'destroy']);
+    Route::get('admin/category', [CategoryController::class, 'index']);
+    Route::delete('admin/category/{category}', [CategoryController::class, 'destroy']);
+    Route::post('admin/category', [CategoryController::class, 'store']);
 });
 
 Route::get('/register', [RegisteredUserController::class, 'create'])

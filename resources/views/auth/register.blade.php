@@ -10,24 +10,26 @@
             @csrf
 
             @auth
-                <div class="flex justify-center">
-                    <x-jet-label for="admin">
-                        <div class="flex items-center">
-                            <x-jet-checkbox name="admin" id="admin"/>
-                            <div class="ml-2 mr-2 font-semibold text-lg">
-                                Admin
+                @if (auth()->user()->can('admin'))
+                    <div class="flex justify-center">
+                        <x-jet-label for="admin">
+                            <div class="flex items-center">
+                                <x-jet-checkbox name="admin" id="admin" value="1" />
+                                <div class="ml-2 mr-2 font-semibold text-lg">
+                                    Admin
+                                </div>
                             </div>
-                        </div>
-                    </x-jet-label>
-                    <x-jet-label for="author">
-                        <div class="flex ml-12 items-center font-semibold text-lg">
-                            <x-jet-checkbox name="author" id="author"/>
-                            <div class="ml-2 mr-2">
-                                Autor
+                        </x-jet-label>
+                        <x-jet-label for="author">
+                            <div class="flex ml-12 items-center font-semibold text-lg">
+                                <x-jet-checkbox name="author" id="author" value="2" />
+                                <div class="ml-2 mr-2">
+                                    Autor
+                                </div>
                             </div>
-                        </div>
-                    </x-jet-label>
-                </div>
+                        </x-jet-label>
+                    </div>
+                @endif
             @endauth
 
             <div>

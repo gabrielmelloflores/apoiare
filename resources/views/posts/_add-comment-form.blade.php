@@ -12,15 +12,16 @@
             </header>
 
             <div class="mt-6">
-
-                <input class="border w-full focus:outline-none focus:ring mb-4 rounded"
-                       name="name"
-                       id="name"
-                       placeholder="Nos fale seu nome!"
-                >
-                @error('name')
-                <span class="text-xs text-red-500">{{ $message }}</span>
-                @enderror
+                @guest
+                    <input class="border w-full focus:outline-none focus:ring mb-4 rounded"
+                           name="name"
+                           id="name"
+                           placeholder="Nos fale seu nome!"
+                    >
+                    @error('name')
+                    <span class="text-xs text-red-500">{{ $message }}</span>
+                    @enderror
+                @endguest
             <textarea
                 name="body"
                 class="border w-full text-sm focus:outline-none focus:ring rounded"

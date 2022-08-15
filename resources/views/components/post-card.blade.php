@@ -32,7 +32,7 @@
 
             <footer class="flex justify-between items-center mt-8">
                 <div class="flex items-center text-sm">
-                    <img src="/images/lary-avatar.svg" alt="Lary avatar">
+                    <img src="{{ $post->author->profile_photo_url }}" alt="Lary avatar" width="50" height="50" class="rounded-xl">
                     <div class="ml-3">
                         <h5 class="font-bold">
                             <a href="/?author={{ $post->author->username }}">{{ $post->author->name }}</a>
@@ -41,10 +41,10 @@
                 </div>
 
                 <div>
-                    <a href="#"
+                    <a href="/posts/{{ $post->slug }}"
                        class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-8"
                     >
-                        Read More
+                        Continuar lendo
                     </a>
                 </div>
             </footer>
