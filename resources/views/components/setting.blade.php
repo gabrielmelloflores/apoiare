@@ -28,13 +28,12 @@
     <div class="sm:hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+            <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'bg-pink-700 text-white block px-3 py-2 rounded-md text-base font-medium' : 'text-gray-900 hover:bg-pink-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium' }}" aria-current="page">Todas Publicações</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+            <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'bg-pink-700 text-white block px-3 py-2 rounded-md text-base font-medium' : 'text-gray-900 hover:bg-pink-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium' }}">Nova Publicação</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="/admin/category" class="{{ request()->is('admin/category') ? 'bg-pink-700 text-white block px-3 py-2 rounded-md text-base font-medium' : 'text-gray-900 hover:bg-pink-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium' }}">Categorias</a>
 
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
         </div>
     </div>
 </nav>
@@ -54,7 +53,7 @@
 {{--            </ul>--}}
 {{--        </aside>--}}
 
-        <main class="flex-1 bg-gray-100">
+        <main class="flex-1 bg-gray-100 w-1">
             <x-panel>
                 {{ $slot }}
             </x-panel>

@@ -65,7 +65,7 @@
 
                             @auth
                                 @if (auth()->user()->can('admin'))
-                                    <x-jet-dropdown-link href="admin/posts">
+                                    <x-jet-dropdown-link href="../admin/posts">
                                         {{ __('Admin') }}
                                     </x-jet-dropdown-link>
                                 @endif
@@ -73,17 +73,12 @@
 
                             @auth
                                 @if (auth()->user()->can('author'))
-                                    <x-jet-dropdown-link href="admin/posts">
+                                    <x-jet-dropdown-link href="../admin/posts">
                                         {{ __('Criar Post') }}
                                     </x-jet-dropdown-link>
                                 @endif
                             @endauth
 
-                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
-                                    {{ __('API Tokens') }}
-                                </x-jet-dropdown-link>
-                            @endif
 
                             <div class="border-t border-gray-100"></div>
 
@@ -145,18 +140,20 @@
 
                 @auth
                     @if (auth()->user()->can('admin'))
-                        <x-jet-responsive-nav-link  href="admin/posts">
+                        <x-jet-responsive-nav-link  href="../admin/posts">
                             {{ __('Admin') }}
                         </x-jet-responsive-nav-link >
                     @endif
                 @endauth
 
-                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                    <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
-                        {{ __('API Tokens') }}
-                    </x-jet-responsive-nav-link>
-                @endif
 
+                @auth
+                    @if (auth()->user()->can('author'))
+                        <x-jet-responsive-nav-link  href="../admin/posts">
+                            {{ __('Criar Post') }}
+                        </x-jet-responsive-nav-link>
+                @endif
+            @endauth
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}" x-data>
                     @csrf

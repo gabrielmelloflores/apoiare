@@ -8,15 +8,15 @@
                 @else
                     <img src="{{url('images/avatar.png')}}" alt="" width="40" height="40" class="rounded-xl">
                 @endif
-                    <h2 class="ml-4">Want to participate?</h2>
+                    <h2 class="ml-4">Quer participar?</h2>
             </header>
 
             <div class="mt-6">
                 @guest
-                    <input class="border w-full focus:outline-none focus:ring mb-4 rounded"
+                    <input class="border w-full focus:outline-none focus:ring mb-4 rounded p-1"
                            name="name"
                            id="name"
-                           placeholder="Nos fale seu nome!"
+                           placeholder="Nos diga o seu nome!"
                     >
                     @error('name')
                     <span class="text-xs text-red-500">{{ $message }}</span>
@@ -24,7 +24,7 @@
                 @endguest
             <textarea
                 name="body"
-                class="border w-full text-sm focus:outline-none focus:ring rounded"
+                class="border w-full text-sm focus:outline-none focus:ring rounded p-1"
                 rows="5"
                 placeholder="Rápido, pense em algo para dizer!"
                 required></textarea>

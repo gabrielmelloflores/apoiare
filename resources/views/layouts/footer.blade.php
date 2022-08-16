@@ -1,6 +1,6 @@
 <footer id="newsletter" class="bg-white border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
     <img src="/images/lary-newsletter-icon.svg" alt="" class="mx-auto -mb-6" style="width: 145px;">
-    <h5 class="text-3xl">Stay in touch with the latest posts</h5>
+    <h5 class="text-3xl">Inscreva-se e Receba as Últimas Publicações</h5>
     <p class="text-sm mt-3">Promise to keep the inbox clean. No bugs.</p>
 
     <div class="mt-10">
@@ -18,7 +18,7 @@
                         <input id="email"
                                name="email"
                                type="text"
-                               placeholder="Your email address"
+                               placeholder="Digite seu e-mail"
                                class="lg:bg-transparent py-2 lg:py-0 pl-4 focus-within:outline-none">
 
                         @error('email')
@@ -30,7 +30,7 @@
                 <button type="submit"
                         class="transition-colors duration-300 bg-blue-500 hover:bg-blue-600 mt-4 lg:mt-0 lg:ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-8"
                 >
-                    Subscribe
+                    Inscreva-se
                 </button>
             </form>
         </div>

@@ -9,7 +9,7 @@
         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
                 <img src="{{ 'storage/' . $post->thumbnail }}" class="h-64 w-full rounded-t pb-6">
-                <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                <p class="w-full text-gray-600 text-xs md:text-sm px-6 pb-2">
                     <x-category-button :category="$post->category"></x-category-button>
                 </p>
 
@@ -26,8 +26,12 @@
         </div>
         <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
             <div class="flex items-center justify-between">
-                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                <img src="{{ $post->author->profile_photo_url }}" alt="Lary avatar" width="30" height="30" class="rounded-xl">
+                <div class="ml-3">
+                    <h5 class="font-bold">
+                        <a href="/?author={{ $post->author->username }}">{{ $post->author->name }}</a>
+                    </h5>
+                </div>
             </div>
         </div>
     </div>

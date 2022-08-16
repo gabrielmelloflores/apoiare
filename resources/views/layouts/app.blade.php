@@ -40,10 +40,10 @@
         @stack('modals')
 
         @livewireScripts
-    </body>
     @if (isset($footer))
-        {{ $footer }}
+    {{ $footer }}
     @endif
-<x-flash></x-flash>
+    </body>
+    <x-flash></x-flash>
 
 </html>
