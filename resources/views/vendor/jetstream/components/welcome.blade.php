@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +16,10 @@
 <body class="bg-gray-200 font-sans leading-normal tracking-normal">
 
 <!--Header-->
-<div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('imagens/coracaoGravida3.png'); height: 60vh; max-height:460px;">
+<div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('images/apoiare.png'); height: 60vh; max-height:460px;">
     <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
         <!--Title-->
-        <p class="text-white font-extrabold text-3xl md:text-5xl">
+        <p class="text-black font-extrabold text-3xl md:text-5xl">
             Apoiare
         </p>
         <p class="text-xl md:text-2xl text-gray-500">Bem-vindo</p>
@@ -91,7 +91,7 @@
 
 
             <!--Posts Container-->
-            <div class="flex flex-wrap justify-between pt-12 -mx-6">
+            <div class="flex flex-wrap justify-between pt-12 mx-6">
                 @foreach($posts as $post)
                     <x-post-card-welcome :post="$post"></x-post-card-welcome>
                 @endforeach
@@ -108,7 +108,7 @@
                 <p class="text-gray-600 text-xs md:text-base">Tailwind CSS version of Ghost's Casper theme by <a class="text-gray-800 hover:text-green-500 no-underline border-b-2 border-green-500" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a></p>
             </div>
             <div class="justify-end">
-                <button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Read More</button>
+                <button class="bg-transparent border border-gray-500 hover:border-green-500 text-xs text-gray-500 hover:text-green-500 font-bold py-2 px-4 rounded-full">Todas publicações</button>
             </div>
         </div>
         <!--/Author-->

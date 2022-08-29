@@ -13,7 +13,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
-                        {{ __('Dashboard') }}
+                        Todas as publicações
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -43,11 +43,11 @@
                                                     </button>
                                                 </span>
                                             @endif
-                                        
+
                                         @endauth
                                     </div>
                             </x-slot>
-                      
+
 
                         <x-slot name="content">
                             <!-- Account Management -->
