@@ -20,14 +20,17 @@
     <x-slot name="header">
     @include ('posts._header')
     </x-slot>
-        @if($posts->count())
+        <section class="lg:px-20 py-8 px-6">
+
+            @if($posts->count())
             <x-posts-grid :posts="$posts"></x-posts-grid>
 
             {{ $posts->links() }} {{--PAGINATION--}}
 
-        @else
-            <p class="text-center" >No post yet. Please check back later.</p>
-        @endif
+            @else
+                <p class="text-center" >Sem publicações no momento. Verifique novamente mais tarde.</p>
+            @endif
+        </section>
     <x-slot name="footer">
         @include ('layouts.footer')
     </x-slot>

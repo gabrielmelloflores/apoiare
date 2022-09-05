@@ -31,7 +31,7 @@
                             </g>
                         </svg>
 
-                        Back to Posts
+                        Publicações
                     </a>
 
                     <div class="space-x-2">

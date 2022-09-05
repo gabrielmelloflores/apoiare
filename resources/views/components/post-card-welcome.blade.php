@@ -30,7 +30,7 @@
                 <img src="{{ $post->author->profile_photo_url }}" alt="Lary avatar" width="30" height="30" class="rounded-xl">
                 <div class="ml-3">
                     <h5 class="font-bold">
-                        <a href="/?author={{ $post->author->username }}">{{ $post->author->name }}</a>
+                        <a href="dashboard/?author={{ $post->author->name }}">{{ $post->author->name }}</a>
                     </h5>
                 </div>
             </div>
