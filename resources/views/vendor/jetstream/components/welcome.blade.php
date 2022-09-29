@@ -16,13 +16,13 @@
 <body class="bg-gray-200 font-sans leading-normal tracking-normal">
 
 <!--Header-->
-<div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('images/apoiare.png'); height: 60vh; max-height:460px;">
+<div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('images/apoiare.png'); height: 50vh; max-height:460px;background-repeat: no-repeat; background-size: contain;margin-bottom: 50px;">
     <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
         <!--Title-->
-        <p class="text-black font-extrabold text-3xl md:text-5xl">
+        {{-- <p class="text-black font-extrabold text-3xl md:text-5xl">
             Apoiare
         </p>
-        <p class="text-xl md:text-2xl text-gray-500">Bem-vindo</p>
+        <p class="text-xl md:text-2xl text-gray-500">Bem-vindo</p> --}}
     </div>
 </div>
 
@@ -36,7 +36,7 @@
             <div class="container mx-auto flex items-center">
 
                 <div class="flex w-1/2 pl-4 text-sm">
-                    <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+                    {{-- <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
                         <li class="mr-2">
                             <a class="inline-block py-2 px-2 text-white no-underline hover:underline" href="post.html">POST</a>
                         </li>
@@ -49,7 +49,7 @@
                         <li class="mr-2">
                             <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-2" href="post_vue.html">POST_VUE</a>
                         </li>
-                    </ul>
+                    </ul> --}}
                 </div>
 
 
@@ -65,22 +65,22 @@
             </div>
         </nav>
 
-        <div class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+        <div class="w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
 
             <!--Lead Card-->
-            <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
+            <div class="flex h-full rounded overflow-hidden shadow-lg">
                     <div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
-                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <p class="w-full text-gray-600 text-xs md:text-sm pt-6 px-6">Puerpério</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6">👋 Sobre Nós</div>
+                        <div class="flex-1 rounded-t rounded-b-none overflow-hidden shadow-lg bg-transparent">
+                            <div class="w-full font-bold text-xl text-gray-900 px-6 mb-5">👋 Bem-Vindas
+                            </div>
                             <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                Puerpério, também chamado resguardo ou quarentena, é a fase pós-parto em que a mulher experimenta modificações físicas e psíquicas.Este é o período de tempo que decorre desde a dequitadura até que os órgãos reprodutores da mãe retornem ao seu estado pré-gravídico. Nesta fase, a mulher é chamada de puerpera.
+                                Nos chamamos Apoiare Puerpério, somos um site cujo objetivo é atuarmos como rede de apoio para você e sua família!
                             </p>
                             <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                O puerpério inicia-se no momento em que cessa a interação hormonal entre o ovo e o organismo materno. Geralmente isto ocorre quando termina o descolamento da placenta, logo depois do nascimento do bebê, embora possa também ocorrer com a placenta ainda inserida, se houver morte do ovo e cessar a síntese de hormônios.
+                                Que essa experiência seja desafiadora e cheia de descobertas!
                             </p>
                             <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                O momento do término do puerpério é impreciso, aceitando-se, em geral, que ele termina quando retorna a ovulação e a função reprodutiva da mulher. Nas puérperas que não amamentam poderá ocorrer a primeira ovulação após 6 a 8 semanas do parto. Nas que estão amamentando, a ovulação retornará em momento praticamente imprevisível. Poderá demorar até 6 a 8 meses, a depender da frequência das mamadas. Isto impõe, entre outras medidas, a adoção de método anticoncepcional adequado.
+                                Você não está sozinha!
                             </p>
                         </div>
 
